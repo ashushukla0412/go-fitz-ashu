@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/gen2brain/go-fitz"
+	"github.com/ashushukla0412/go-fitz-ashu"
 )
 
 func TestImage(t *testing.T) {
