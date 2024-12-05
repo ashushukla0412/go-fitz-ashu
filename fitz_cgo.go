@@ -217,6 +217,7 @@ func (f *Document) ImageDPI(pageNumber int, dpi float64) (*image.RGBA, error) {
 
 	imgPixelsLength := C.int(4 * bbox.x1 * bbox.y1)
 	if imgPixelsLength < 0 {
+		C.fz_drop_page(f.ctx, page)
 		return nil, ErrPixelsLength
 	}
 
